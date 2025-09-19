@@ -1,17 +1,42 @@
-import React from 'react';
-import Header from './Header';
+import React from "react";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 import './App.css';
+import RecommendedVideos from "./RecommendedVideos";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    //BEM class name convention
     <div className="app">
-     {/*<h1>hello sathwik lets build a youtube clone</h1> */}
-         <Header />
+      <Router>
+        <Routes>
+          <Route
+            path="/search"
+            element={
+              <>
+                <Header />
+                <h1> Search page</h1>
+              </>
+            }
+          >
+          </Route>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <div className="app__page">
+                  <Sidebar />
+                  <RecommendedVideos />
+                  <h1> Home page</h1>
+                </div>
 
-     {/* Header  -> <Header /> */}
-     {/* Sidebar -> <Sidebar /> */}
-     {/* RecommendedVideos */}
+              </>
+            }
+          >
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

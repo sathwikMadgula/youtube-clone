@@ -10,25 +10,29 @@ import { Avatar } from "@mui/material";
 function Header() {
   return (
     <div className="header">
-         <MenuIcon />
-         <p></p>
-         {/* <img src="/youtubelogo.png" alt="asdf"></img> */}
-         {/* <img src={youtubelogo} alt="asdf"></img> */}
-         
-         <img 
-            className="header__logo" 
-            src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" 
-            alt="asdf"
-          />
-          <input type="text"/> 
-          <Search /> 
-          <VideoCall /> 
-          <Apps />  
-          <Notifications />    
-          <Avatar 
-            src="./assets/avatar.svg"
-          />   
-   </div>
+      <div className="header__left">
+        <MenuIcon />
+        <img
+          className="header__logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+          alt="asdf"
+        />
+      </div>
+      <div className="header__input">
+        <input placeholder="search" type="text" />
+        <Search className="header__inputButton" />
+      </div>
+
+      <div className="header__icons">
+        <VideoCall className="header__icon" />
+        <Apps className="header__icon" />
+        <Notifications className="header__icon" />
+        <Avatar className="header__icon"
+          src="./assets/avatar.svg"
+        />
+      </div>
+
+    </div>
   );
 }
 
