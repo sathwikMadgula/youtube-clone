@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path="/search"
+            path="/search/:sathwik_gudda"
             element={
               <>
                 <Header />
@@ -20,6 +20,7 @@ function App() {
             }
           >
           </Route>
+          
           <Route
             path="/"
             element={
@@ -28,7 +29,7 @@ function App() {
                 <div className="app__page">
                   <Sidebar />
                   <RecommendedVideos />
-                  <h1> Home page</h1>
+                  {/* <h1> Home page</h1> */}
                 </div>
 
               </>
