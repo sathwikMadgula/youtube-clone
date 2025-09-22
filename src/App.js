@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import SearchPage from "./SearchPage";
 import './App.css';
 import RecommendedVideos from "./RecommendedVideos";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -15,12 +16,17 @@ function App() {
             element={
               <>
                 <Header />
-                <h1> Search page</h1>
+                <div className="app__page">
+                  <Sidebar />
+                  <SearchPage />
+                </div>
+                {/* <h1> Search page</h1> */}
               </>
             }
           >
+
           </Route>
-          
+
           <Route
             path="/"
             element={
@@ -29,7 +35,6 @@ function App() {
                 <div className="app__page">
                   <Sidebar />
                   <RecommendedVideos />
-                  {/* <h1> Home page</h1> */}
                 </div>
 
               </>
